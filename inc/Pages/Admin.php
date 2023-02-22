@@ -6,7 +6,9 @@
 
 namespace Inc\Pages;
 
-class Admin
+use \Inc\Base\BaseController;
+
+class Admin extends BaseController
 {
     function __construct()
     {
@@ -17,11 +19,12 @@ class Admin
     }
     function add_admin_pages()
     {
-        add_menu_page('Alecaddd Plugin', 'Alecaddd', 'manage_options', 'alecaddd_plugin', array($this, 'admin_index_callback'), 'dashicons-book', 90);
+        add_menu_page('Alecaddd Plugin', 'Alecaddd', 'manage_options', 'alecaddd_plugin', array($this, 'admin_index'), 'dashicons-book', 90);
     }
 
-    function admin_index_callback()
+    function admin_index()
     {
         require_once PLUGIN_PATH . 'templates/admin.php';
+        //require_once $this->plugin_path . 'templates/admin.php';
     }
 }
