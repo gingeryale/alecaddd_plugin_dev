@@ -20,6 +20,7 @@ final class Init
         return [
             Pages\Admin::class,
             Base\Enqueue::class,
+            Base\SettingsLinks::class,
         ];
     }
     /**
@@ -69,14 +70,12 @@ final class Init
 //             // add action and link method
 //             add_action('admin_menu', array($this, 'add_admin_pages'));
 
-//             add_filter("plugin_action_links_$this->plugin", array($this, 'settings_link'));
+//             
 //         }
 
 //         function settings_link($links)
 //         {
-//             $settings_link = '<a href="admin.php?page=alecaddd_plugin">Settings</a>';
-//             array_push($links, $settings_link);
-//             return $links;
+//             
 //         }
 
 //         function activate()
